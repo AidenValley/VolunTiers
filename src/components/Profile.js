@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Opportunity from './Opportunity';
 
 const Profile = (props) => {
    const { handleLogout, user } = props;
@@ -15,7 +16,7 @@ const Profile = (props) => {
 
    const userData = user ?
    (<div>
-       <h1>Profile</h1>
+       <h1>User Profile</h1>
        <p>Name: {name}</p>
        <p>Email: {email}</p>
        <p>ID: {id}</p>
@@ -32,6 +33,7 @@ const Profile = (props) => {
     return (
         <div className="text-center pt-4">
             {user ? userData : errorDiv()}
+            <Opportunity />
         </div>
     );
 

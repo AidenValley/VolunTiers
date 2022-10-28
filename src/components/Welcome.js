@@ -3,8 +3,8 @@ import React from 'react';
 const Welcome = () => {
     return (
         <div>
-            <h1>MERN Authentication</h1>
-            <p>Welcome to my app.</p>
+            <h1>VolunTiers</h1>
+            <p>Welcome to VolunTiers.</p>
         </div>
     )
 }
