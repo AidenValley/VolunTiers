@@ -1,3 +1,5 @@
+# VolunTiers
+
 # Setup
 
 Due to this project using an older package not fully supported on node17+ we'll need to run one initial command before we run our npm install. 
@@ -22,6 +24,25 @@ powershell:
 $env:NODE_OPTIONS = "--openssl-legacy-provider"
 ```
 
+# VolunTiers About:
+## MERN stack web application (Volunteer Tracking Application) that targets the users who are actively seeking for local volunteer activities and become (signup) Tier members. 
+
+## Essentially, this application is fun and intuitive but also helps multiples of professionals who intend to organize their volunteer activities in a condensed form.
+
+# VolunTiers WireFrame:
+![VolunTier-WireFrame](https://user-images.githubusercontent.com/107300143/198853680-c266df19-fc8c-4ac5-85cd-231cd1177c43.png)
+
+## Wireframe Key Notes
+![image](https://user-images.githubusercontent.com/107300143/198853712-8c98f60d-d12a-4085-aeb6-649606f09b6e.png)
+### Home page is designed to have the simple aesthetic look of the application stating few key points of application purposes such as mission statements.
+
+
+![image](https://user-images.githubusercontent.com/107300143/198853789-eaec093e-0e06-4f47-820b-642e2c8863df.png)
+
+### User Profile Page intends to contain the most crucial information / data that the normal users can dropdown for events, access the service hours, and more volunteer opportunities!
+
+
+
 # MERN Authentication Frontend
 
 | Components | Links to Code | Description |
@@ -35,6 +56,7 @@ $env:NODE_OPTIONS = "--openssl-legacy-provider"
 | `About`| [`About`](https://github.com/romebell/mern-auth-frontend/blob/main/docs/other-components.md#about) | A component that decribes the app |
 | `Footer`| [`Footer`](https://github.com/romebell/mern-auth-frontend/blob/main/docs/other-components.md#footer) | A footer that goes on each component |
 | `Welcome`| [`Welcome`](https://github.com/romebell/mern-auth-frontend/blob/main/docs/other-components.md#welcome) | A welcome page for the user |
+
 
 ### `App Component`
 
