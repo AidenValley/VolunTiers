@@ -22,6 +22,16 @@ powershell:
 $env:NODE_OPTIONS = "--openssl-legacy-provider"
 ```
 
+### User Story 
+
+- As a user, I want to be able to manage members that are apart of clubs and sports teams within my organization. 
+- As a user, I want to be able to verify active and inactive members service hours, contact information, and service project status. 
+- As a user, I want to be able to see how many service hours that I have completed and if the hours apply for credits. 
+- As a user, I would like to see currently available service hours and past service projects. 
+- As a user, I would like to be able to sign in and out of service projects with accurately recorded hours. 
+- As a user, I would like to be able to my current badges earned and my ranking on the leader board. 
+
+
 # MERN Authentication Frontend
 
 | Components | Links to Code | Description |
