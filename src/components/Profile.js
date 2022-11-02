@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Opportunity from './Opportunity';
+import Userprofile from './Userprofile';
 
 const Profile = (props) => {
    const { handleLogout, user } = props;
@@ -42,7 +42,7 @@ const Profile = (props) => {
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="./userprofile">
                                     <span data-feather="file" class="align-text-bottom"></span>
                                     Profile
                                 </a>
@@ -56,7 +56,7 @@ const Profile = (props) => {
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
                                     <span data-feather="users" class="align-text-bottom"></span>
-                                    Past Opportunities
+                                    LeaderBoards
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -117,40 +117,56 @@ const Profile = (props) => {
                     </div>
                     <span className="portfolio-item d-block">
                         <div className="foto">
-                            <div>
-                            <h1>User Profile</h1>
-                            <p>Name: {name} </p>
-                            <p>Email: {email} </p>
-                            <p>ID: {id} </p>
-                            <br />
-                            <span style={{ color: "black" }} className="project-date">Hello</span>
-                            <br />
-                            <p className="project-title-settings mt-3">
-                                <Opportunity />
-                            </p>
-                            </div>
+                            <h2>Hi, {name}</h2>
                         </div>
-
-                        <div className="foto">
-                            <div>
-                            
-                            <br />
-                            <span className="project-date" style={{ color: "black" }}>Hello</span>
-                            <br />
-                            <p className="project-title-settings mt-3">
-                                "Hello"
-                            </p>
-                            </div>
-                        </div>
+                        <br/>
+                            <div className='container'>
+                                <div className='container'>
+                                    <div className="row text-center">
+                                        <div className="col border border-info">
+                                            <strong><em>Profile</em></strong>
+                                            <h3>Name: {name} </h3>
+                                            <p>Email: {email} </p>
+                                            <p>Current Position: </p>
+                                            <p>Total Service Hours: </p>
+                                            <p>ID: {id} </p>
+                                        </div>
+                                        <div className="col border border-info">
+                                            <h3>Name: {name} </h3>
+                                            <p>Email: {email} </p>
+                                            <p>ID: {id} </p>
+                                        </div>
+                                        <div className="col border border-info">
+                                            <h3>Name: {name} </h3>
+                                            <p>Email: {email} </p>
+                                            <p>ID: {id} </p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div className='container'>
+                                    <div className='container'>
+                                        <div className="text-center">
+                                            <div className="col border border-info">
+                                                <h3>Name: {name} </h3>
+                                                <p>Email: {email} </p>
+                                                <p>ID: {id} </p>
+                                            </div>
+                                            <div className="col border border-info">
+                                                <h3>Name: {name} </h3>
+                                                <p>Email: {email} </p>
+                                                <p>ID: {id} </p>
+                                            </div>
+                                            <div className="col border border-info">
+                                                <h3>Name: {name} </h3>
+                                                <p>Email: {email} </p>
+                                                <p>ID: {id} </p>
+                                            </div>               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                     </span>
-
-                    <canvas class="my-4 w-100" id="myChart" width="900" height="380">
-                        <p>"Hello"</p>
-
-                    </canvas>
-                        
-                    <h2>Section title</h2>
-            
                 </main>
             </div>
         </div></>
