@@ -24,6 +24,18 @@ powershell:
 $env:NODE_OPTIONS = "--openssl-legacy-provider"
 ```
 
+
+
+### User Story 
+
+- As a user, I want to be able to manage members that are apart of clubs and sports teams within my organization. 
+- As a user, I want to be able to verify active and inactive members service hours, contact information, and service project status. 
+- As a user, I want to be able to see how many service hours that I have completed and if the hours apply for credits. 
+- As a user, I would like to see currently available service hours and past service projects. 
+- As a user, I would like to be able to sign in and out of service projects with accurately recorded hours. 
+- As a user, I would like to be able to my current badges earned and my ranking on the leader board. 
+
+
 # VolunTiers About:
 ## MERN stack web application (Volunteer Tracking Application) that targets the users who are actively seeking for local volunteer activities and become (signup) Tier members. 
 
@@ -40,6 +52,7 @@ $env:NODE_OPTIONS = "--openssl-legacy-provider"
 ![image](https://user-images.githubusercontent.com/107300143/198853789-eaec093e-0e06-4f47-820b-642e2c8863df.png)
 
 ### User Profile Page intends to contain the most crucial information / data that the normal users can dropdown for events, access the service hours, and more volunteer opportunities!
+
 
 
 
