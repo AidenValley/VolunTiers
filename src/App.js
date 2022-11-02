@@ -15,25 +15,31 @@ import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import Welcome from './components/Welcome';
+
 import Adminprofile from './components/Adminprofile';
 import Contact from './components/Contact';
 import Past from './components/Past';
 
 
-const PrivateRoute = ({ component: Component, ...rest}) => {
+import Opportunities from './components/Opportunities';
+
+
+const PrivateRoute = ({ component: Component, ...rest }) => {
   let token = localStorage.getItem('jwtToken');
   console.log('===> Hitting a Private Route');
   return <Route {...rest} render={(props) => {
-    return token ? <Component {...rest} {...props} /> : <Redirect to="/login"/>
+    return token ? <Component {...rest} {...props} /> : <Redirect to="/login" />
   }} />
 }
+
+// Opportunities
 
 function App() {
   // Set state values
   const [currentUser, setCurrentUser] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(true);
 
- 
+
   useEffect(() => {
     let token;
 
@@ -64,6 +70,7 @@ function App() {
 
   return (
     <Router>
+
     <div className="App">
       <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
       <div className="container mt-5">
@@ -80,11 +87,14 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/past" component={Past} />
           <Route path="/contact" component={Contact} />
+          <Route path="/opportunities" component={Opportunities} />
         </Switch>
         
+        </div>
+
+        <Footer />
+
       </div>
-      <Footer />
-    </div>
     </Router>
   );
 }

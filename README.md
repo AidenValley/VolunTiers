@@ -24,7 +24,10 @@ powershell:
 $env:NODE_OPTIONS = "--openssl-legacy-provider"
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> userStory
 ### User Story 
 
 - As a user, I want to be able to manage members that are apart of clubs and sports teams within my organization. 
@@ -35,6 +38,7 @@ $env:NODE_OPTIONS = "--openssl-legacy-provider"
 - As a user, I would like to be able to my current badges earned and my ranking on the leader board. 
 
 
+<<<<<<< HEAD
 # VolunTiers About:
 ## MERN stack web application (Volunteer Tracking Application) that targets the users who are actively seeking for local volunteer activities and become (signup) Tier members. 
 
@@ -55,6 +59,8 @@ $env:NODE_OPTIONS = "--openssl-legacy-provider"
 
 
 
+=======
+>>>>>>> userStory
 # MERN Authentication Frontend
 
 | Components | Links to Code | Description |
