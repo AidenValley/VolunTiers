@@ -19,6 +19,7 @@ import Welcome from './components/Welcome';
 import Adminprofile from './components/Adminprofile';
 import Contact from './components/Contact';
 import Past from './components/Past';
+import OrganizationsContainer from './components/OrganizationsContainer';
 
 
 import Opportunities from './components/Opportunities';
@@ -88,6 +89,7 @@ function App() {
           <Route path="/past" component={Past} />
           <Route path="/contact" component={Contact} />
           <Route path="/opportunities" component={Opportunities} />
+          <Route path="/organizations" component={OrganizationsContainer} />
         </Switch>
         
         </div>
