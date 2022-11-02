@@ -92,10 +92,13 @@ function App() {
           <Route path="/past" component={Past} />
           <Route path="/contact" component={Contact} />
 
+
           <Route path="/opportunitydetail/:eventId" component={OpportunityDetail} />
           <Route path="/organizations" component={OrganizationsContainer} />
          
 
+
+       
         </Switch>
         
         </div>
