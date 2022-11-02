@@ -24,7 +24,11 @@ import OrganizationsContainer from './components/OrganizationsContainer';
 
 import OpportunityDetail from './components/OpportunityDetail';
 
-const PrivateRoute = ({ component: Component, ...rest  }) => {
+
+
+
+const PrivateRoute = ({ component: Component, ...rest }) => {
+
   let token = localStorage.getItem('jwtToken');
   console.log('===> Hitting a Private Route');
   return <Route {...rest} render={(props) => {
@@ -87,9 +91,11 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/past" component={Past} />
           <Route path="/contact" component={Contact} />
+
           <Route path="/opportunitydetail/:eventId" component={OpportunityDetail} />
           <Route path="/organizations" component={OrganizationsContainer} />
          
+
         </Switch>
         
         </div>
