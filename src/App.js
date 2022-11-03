@@ -21,8 +21,7 @@ import Adminprofile from './components/Adminprofile';
 import Contact from './components/Contact';
 import Past from './components/Past';
 import OrganizationsContainer from './components/OrganizationsContainer';
-
-import OpportunityDetail from './components/OpportunityDetail';
+import Opportunities from './components/Opportunities';
 
 
 
@@ -93,7 +92,7 @@ function App() {
           <Route path="/contact" component={Contact} />
 
 
-          <Route path="/opportunitydetail/:eventId" component={OpportunityDetail} />
+          <Route path="/opportunities" component={Opportunities} />
           <Route path="/organizations" component={OrganizationsContainer} />
          
 
