@@ -1,6 +1,6 @@
 // Imports
 import React, { useEffect, useState } from 'react';
-import { Route, Switch, Redirect, BrowserRouter as Router } from 'react-router-dom';
+import { NavLink, Route, Switch, Redirect, BrowserRouter as Router } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 
@@ -20,10 +20,9 @@ import Adminprofile from './components/Adminprofile';
 import Contact from './components/Contact';
 import Past from './components/Past';
 import OrganizationsContainer from './components/OrganizationsContainer';
-
-
+import DashboardNavbar from './components/DashboardNavbar';
 import Opportunities from './components/Opportunities';
-
+import Userprofile from './components/Userprofile';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   let token = localStorage.getItem('jwtToken');
@@ -90,6 +89,9 @@ function App() {
           <Route path="/contact" component={Contact} />
           <Route path="/opportunities" component={Opportunities} />
           <Route path="/organizations" component={OrganizationsContainer} />
+          <Route path="/dashboardnavbar" component={DashboardNavbar} />
+          <Route path="/userprofile" component={Userprofile} />
+          {/* <DashboardNavbar /> */}
         </Switch>
         
         </div>
