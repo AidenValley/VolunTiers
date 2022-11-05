@@ -20,19 +20,8 @@ import Contact from './components/Contact';
 import Past from './components/Past';
 import OrganizationsContainer from './components/OrganizationsContainer';
 import Opportunities from './components/Opportunities';
-
-import Contact from './components/Contact';
-import Past from './components/Past';
-import OrganizationsContainer from './components/OrganizationsContainer';
-import OrgDetail from './components/OrgDetail';
-
-import Contact from './components/Contact';
-import Past from './components/Past';
-import OrganizationsContainer from './components/OrganizationsContainer';
 import DashboardNavbar from './components/DashboardNavbar';
 import OrgDetail from './components/OrgDetail';
-
-import Opportunities from './components/Opportunities';
 import Userprofile from './components/Userprofile';
 import Board from './components/Board';
 
@@ -110,7 +99,6 @@ function App() {
           <Route path="/userprofile" component={Userprofile} />
           <Route path="/orgdetail/:id" component={OrgDetail} />
           <Route path="/board" component={Board} />
-
         </Switch>
         
         </div>

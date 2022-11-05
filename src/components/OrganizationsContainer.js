@@ -1,7 +1,7 @@
 // Imports
 import React, { useState } from 'react';
 import axios from 'axios';
-// import OppCreateForm from './OppCreateForm';
+import OppCreateForm from './OppCreateForm';
 const { REACT_APP_SERVER_URL } = process.env;
 
 const OrganizationsContainer = () => {
@@ -22,22 +22,26 @@ const OrganizationsContainer = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const newOrganization = org;
-        axios.post(`${REACT_APP_SERVER_URL}/organizations/create`, newOrganization)
+        axios.post(`${REACT_APP_SERVER_URL}/organizations/`, newOrganization)
             .then(response => {
                 console.log('===> Yay, new organization');
                 console.log(response);
                 setCreated(true);
+             setOrg(response.data.organizations)
             })
     }
 
-    if (created) return 
-    <div>
-        <h1>Welcome, {org.orgName}!</h1>
-        <p>You can create an event or look at who's registered for your event here.</p>
-        <div>
-            <OppCreateForm org={response}/>
-        </div>
-    </div>
+    if (created) {
+
+        return (<div>
+            <h1>Welcome, {org.orgName}!</h1>
+            <p>You can create an event or look at who's registered for your event here.</p>
+            <div>
+                <OppCreateForm org={org._id}/>
+            </div>
+        </div>)
+    } 
+
 
     return (
         <div className="row mt-4">
