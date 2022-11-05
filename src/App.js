@@ -21,7 +21,6 @@ import OrganizationsContainer from './components/OrganizationsContainer';
 import Opportunities from './components/Opportunities';
 import DashboardNavbar from './components/DashboardNavbar';
 import OrgDetail from './components/OrgDetail';
-
 import Userprofile from './components/Userprofile';
 import Board from './components/Board';
 
