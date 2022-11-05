@@ -9,7 +9,11 @@ const Board = () => {
         fetchLeaders();
     }, [])
     useEffect(() => {
+
         console.log(leaders)
+
+        console.log(leaders);
+
     }, [leaders])
 
     const fetchLeaders = async () => {
