@@ -1,41 +1,26 @@
 import React, {useEffect, useState}from 'react';
 // import { NavLink, Link, Redirect } from 'react-router-dom';
 import DashboardNavbar from './DashboardNavbar';
-import Profile from'./Profile';
+// import Profile from'./Profile';
 import axios from 'axios';
 const { REACT_APP_SERVER_URL } = process.env;
 
 
 const Userprofile = (props) => {
-    const [userProfiles, setProfile] = useState([]);
 
-    // useEffect(() => {
-    //     axios.get(`${REACT_APP_SERVER_URL}/userProfile`)
-    //     .then(response => {
-    //         console.log(response.data);
-    //         setProfile(response.data.userProfile);
-    //     })
-    // }, [])
+    const [profile, setProfile] = useState([]);
 
     useEffect(() => {
         renderProfiles();
     }, [])
     useEffect(() => {
-        console.log(userProfiles)
-    }, [userProfiles])
+        console.log(profile);
+    }, [profile])
     
     const renderProfiles = async () => {
-        const response = await axios.get(`${REACT_APP_SERVER_URL}/userprofile`)
+        const response = await axios.get(`${REACT_APP_SERVER_URL}/users/userprofile`);
         setProfile(response.data);
     }
-    // const renderProfiles = () => {
-    //     if (userProfile.length) {
-    //         let profileArray = userProfile.map((p, idx) => <Profile p={p} key={idx} />)
-    //         return profileArray
-    //     } else {
-    //         return <h1>There are no Profiles</h1>
-    //     }
-    // }
 
   return (
     
@@ -43,7 +28,6 @@ const Userprofile = (props) => {
          <DashboardNavbar />
           <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                     <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        
                         <h1 className="h2">Your Profile</h1>
                         <div className="btn-toolbar mb-2 mb-md-0">
                             <div className="btn-group me-2">
@@ -65,10 +49,16 @@ const Userprofile = (props) => {
                                 <div className='container'>
                                     <div className="row text-center">
                                         <div className="col border border-info">
-                                            <h4>Name:  </h4> 
+                                            <h4>Name:  
+                                            {
+                                                profile.map((userProfile) => {
+                                                return <li key={userProfile.id}> { userProfile.name }</li>
+                                                })
+                                                    }    
+                                            </h4> 
                                         </div>
                                         <div className="col border border-info">
-                                            <h4>Email:  </h4>
+                                            <h4>Email:</h4>
                                         </div>
                                         <div className="col border border-info">
                                             <h4>ID: </h4>
@@ -80,13 +70,8 @@ const Userprofile = (props) => {
                                     <div className='container'>
                                         <div className="row text-center">
                                             <div className="col border border-info">
-                                                <h4> Member Since,  </h4> 
+                                                <h4> Member Since, </h4> 
                                                 <h5>
-                                                {
-                                                userProfiles.map((userProfile) => {
-                                                return <li key={userProfile.id}>{ userProfile.name } - {userProfile.hours }</li>
-                                                })
-                                                    }
                                                 </h5>
                                             </div>
                                             <div className="col border border-info">

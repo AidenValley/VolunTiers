@@ -15,14 +15,15 @@ import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import Welcome from './components/Welcome';
-
 import Adminprofile from './components/Adminprofile';
 import Contact from './components/Contact';
 import Past from './components/Past';
 import OrganizationsContainer from './components/OrganizationsContainer';
 import DashboardNavbar from './components/DashboardNavbar';
+import OrgDetail from './components/OrgDetail';
 import Opportunities from './components/Opportunities';
 import Userprofile from './components/Userprofile';
+import Board from './components/Board';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   let token = localStorage.getItem('jwtToken');
@@ -91,7 +92,8 @@ function App() {
           <Route path="/organizations" component={OrganizationsContainer} />
           <Route path="/dashboardnavbar" component={DashboardNavbar} />
           <Route path="/userprofile" component={Userprofile} />
-          {/* <DashboardNavbar /> */}
+          <Route path="/orgdetail/:id" component={OrgDetail} />
+          <Route path="/board" component={Board} />
         </Switch>
         
         </div>
