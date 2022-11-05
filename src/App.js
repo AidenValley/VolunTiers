@@ -22,6 +22,7 @@ import Contact from './components/Contact';
 import Past from './components/Past';
 import OrganizationsContainer from './components/OrganizationsContainer';
 import Opportunities from './components/Opportunities';
+import OppDetail from './components/OppDetail';
 
 
 
@@ -93,6 +94,8 @@ function App() {
 
 
           <Route path="/opportunities" component={Opportunities} />
+          <Route path="/oppdetail" component={OppDetail} />
+
           <Route path="/organizations" component={OrganizationsContainer} />
          
 
