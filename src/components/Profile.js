@@ -58,12 +58,11 @@ const Profile = (props) => {
                                 
                                     <span data-feather="bar-chart-2" className="align-text-bottom"></span>
                                     <NavLink className="nav-link" exact to="/orgdetail/:id" >Create Event</NavLink>
-                              
                             </li>
                             <li className="nav-item">
                                
                                     <span data-feather="layers" className="align-text-bottom"></span>
-                                    Contact Us
+                                    
                                 
                             </li>
                         </ul>

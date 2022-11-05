@@ -18,13 +18,16 @@ import Welcome from './components/Welcome';
 import Contact from './components/Contact';
 import Past from './components/Past';
 import OrganizationsContainer from './components/OrganizationsContainer';
+import Opportunities from './components/Opportunities';
 import DashboardNavbar from './components/DashboardNavbar';
 import OrgDetail from './components/OrgDetail';
-import Opportunities from './components/Opportunities';
+
 import Userprofile from './components/Userprofile';
 import Board from './components/Board';
 
+
 const PrivateRoute = ({ component: Component, ...rest }) => {
+
   let token = localStorage.getItem('jwtToken');
   console.log('===> Hitting a Private Route');
   return <Route {...rest} render={(props) => {

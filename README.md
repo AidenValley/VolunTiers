@@ -24,6 +24,7 @@ powershell:
 $env:NODE_OPTIONS = "--openssl-legacy-provider"
 ```
 
+
 ### User Story 
 
 - As a user, I want to be able to manage members that are apart of clubs and sports teams within my organization. 
