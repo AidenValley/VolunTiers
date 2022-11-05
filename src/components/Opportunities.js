@@ -20,8 +20,9 @@ const Opportunities = () => {
 
     return (
         <div className="board">
+            
             <h1 className='opportunities'>Opportunities Available</h1>
-
+            <input type='text' placeholder='Search...' />
             <div style={{ alignItems: 'center', margin: '20px 60px' }}>
                 <ul>
                     {
