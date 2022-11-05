@@ -5,7 +5,7 @@ import { NavLink, Link } from 'react-router-dom';
 
 const Profile = (props) => {
    const { handleLogout, user } = props;
-   const { id, name, email, exp } = user;
+   const { id, name, email, exp, hours } = user;
    const expirationTime = new Date(exp * 1000);
    let currentTime = Date.now();
     
@@ -37,10 +37,8 @@ const Profile = (props) => {
                     <div className="position-sticky pt-3 sidebar-sticky">
                         <ul className="nav flex-column">
                             <li className="nav-item">
-                                
                                     <span data-feather="home" className="align-text-bottom"></span>
-                                    Dashboard
-                               
+                                    <NavLink className="nav-link" exact to="/profile" >Dashboard</NavLink>
                             </li>
                             <li className="nav-item">
                             <NavLink className="nav-link" exact to="/userprofile" >Update Profile</NavLink>
@@ -48,14 +46,13 @@ const Profile = (props) => {
                             </li>
                             <li className="nav-item">
                                     <span data-feather="shopping-cart" className="align-text-bottom"></span>
-                                    Volunteer Opportunities
+                                    <NavLink className="nav-link" exact to="/opportunities" >Volunteer Opportunities</NavLink>
                                
                             </li>
                             <li className="nav-item">
                                 
                                     <span data-feather="users" className="align-text-bottom"></span>
-                                    LeaderBoards
-                           
+                                    <NavLink className="nav-link" exact to="/board" >LeaderBoards</NavLink>
                             </li>
                             <li className="nav-item">
                                 
@@ -123,18 +120,16 @@ const Profile = (props) => {
                                 <div className='container'>
                                     <div className="row text-center">
                                         <div className="col border border-info">
-                                            <h4>Total Service Hours: </h4> 
+                                            <h4>Total Service Hours: {hours} </h4> 
                                 
                                         </div>
                                         <div className="col border border-info">
                                             <h3>Name: {name} </h3>
-                                            <p>Email: {email} </p>
-                                            <p>ID: {id} </p>
+                                            
                                         </div>
                                         <div className="col border border-info">
                                             <h3>Name: {name} </h3>
-                                            <p>Email: {email} </p>
-                                            <p>ID: {id} </p>
+                                            
                                         </div>
                                     </div>
                                     
@@ -144,18 +139,15 @@ const Profile = (props) => {
                                         <div className="text-center">
                                             <div className="col border border-info">
                                                 <h3>Name: {name} </h3>
-                                                <p>Email: {email} </p>
-                                                <p>ID: {id} </p>
+                                                
                                             </div>
                                             <div className="col border border-info">
                                                 <h3>Name: {name} </h3>
-                                                <p>Email: {email} </p>
-                                                <p>ID: {id} </p>
+                                               
                                             </div>
                                             <div className="col border border-info">
                                                 <h3>Name: {name} </h3>
-                                                <p>Email: {email} </p>
-                                                <p>ID: {id} </p>
+                                                
                                             </div>               
                                             </div>
                                         </div>
