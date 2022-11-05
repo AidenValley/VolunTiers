@@ -11,18 +11,19 @@ const OrganizationsContainer = () => {
         contactEmail: "",
         contactPhone: ""
     });
-
-
-    const [created, setCreated] = useState(false)
+    
+    const [redirect, setRedirect] = useState(false);
 
     const handleChange = (e) => {
-        setOrg({ ...org, [e.target.name]: e.target.value });
+        setOrg({...org, [e.target.name]: e.target.value});
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        const newOrganization = org;
-        axios.post(`${REACT_APP_SERVER_URL}/organizations/create`, newOrganization)
+        e.preventDefault(); // at the beginning of a submit function
+        // make sure password and confirm password are equal
+        // password length >= 8 characters     
+            const newOrganization = org;
+            axios.post(`${REACT_APP_SERVER_URL}/organizations/create`, newOrganization)
             .then(response => {
                 console.log('===> Yay, new organization');
                 console.log(response);
@@ -47,19 +48,19 @@ const OrganizationsContainer = () => {
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="orgName">Organization Name</label>
-                            <input type="text" name="orgName" value={org.orgName} onChange={handleChange} className="form-control" />
+                            <input type="text" name="orgName" value={org.orgName} onChange={handleChange} className="form-control"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="contactEmail">Email</label>
-                            <input type="email" name="contactEmail" value={org.contactEmail} onChange={handleChange} className="form-control" />
+                            <input type="email" name="contactEmail" value={org.contactEmail} onChange={handleChange} className="form-control"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="contactPerson">Contact Name</label>
-                            <input type="text" name="contactPerson" value={org.contactPerson} onChange={handleChange} className="form-control" />
+                            <input type="text" name="contactPerson" value={org.contactPerson} onChange={handleChange} className="form-control"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="contactPhone">Phone</label>
-                            <input type="text" name="contactPhone" value={org.contactPhone} onChange={handleChange} className="form-control" />
+                            <input type="text" name="contactPhone" value={org.contactPhone} onChange={handleChange} className="form-control"/>
                         </div>
                         <button type="submit" className="btn btn-primary float-right">Submit</button>
                     </form>
