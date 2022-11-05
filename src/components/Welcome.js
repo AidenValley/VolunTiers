@@ -2,26 +2,25 @@ import React from 'react';
 
 const Welcome = () => {
     return (
-        <body id="page-top">
-            <header class="bg-info bg-gradient text-white mw-100">
-                <div class="container px-4 text-center">
-                    <h1 class="fw-bolder">Welcome To VolunTier</h1>
-                    <p class="lead">This is all about Volunteering Activities and Events</p>
-                    <button class="btn btn-lg btn-light cursor" href="#about">Lets Explore!</button>
-                </div>
-            </header>
-            <br></br>
-            <div class="">
-                <div class="container px-4 text-center">
-                    <h1 class="fw-bolder"> Explore the Best Volunteer Opportunities</h1>
-                    <p class="lead">Icons will be here (Animals, Children, Trash pickup) </p>
-                </div>
+        <body className="d-flex h-100 text-center text-bg-dark">
+            <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="mb-auto">
+            <div>
+                <h3 class="float-md-start mb-0">Welcome To VolunTier</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link fw-bold py-1 px-0" href="#">VolunTier Opportunities</a>
+                    <a class="nav-link fw-bold py-1 px-0" href="#">Dashboard</a>
+                </nav>
             </div>
-            <div class="">
-                <div class="container px-2 text-center">
-                    <h1 class="fw-bolder"> Your Actions on Our Community</h1>
-                    <p class="lead"> Different examples and pictures </p>
-                </div>
+            <main class="px-3">
+                <h1>VolunTier: VolunGold, VolunSilver, VolunBronze</h1>
+                <p class="lead">This is all about Volunteering Activities and Events</p>
+                <p class="lead">
+                <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
+                </p>
+            </main>
+        </header>
             </div>
         </body>
     )
