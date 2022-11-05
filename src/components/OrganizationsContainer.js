@@ -22,7 +22,7 @@ const OrganizationsContainer = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const newOrganization = org;
-        axios.post(`${REACT_APP_SERVER_URL}/organizations/create`, newOrganization)
+        axios.post(`${REACT_APP_SERVER_URL}/organizations/`, newOrganization)
             .then(response => {
                 console.log('===> Yay, new organization');
                 console.log(response);
@@ -35,7 +35,7 @@ const OrganizationsContainer = () => {
         <h1>Welcome, {org.orgName}!</h1>
         <p>You can create an event or look at who's registered for your event here.</p>
         <div>
-            <OppCreateForm org={response}/>
+            {/* <OppCreateForm org/> */}
         </div>
     </div>
 

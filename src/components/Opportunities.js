@@ -5,19 +5,19 @@ const { REACT_APP_SERVER_URL } = process.env;
 const Opportunities = () => {
     const [opportunities, setOpportunity] = useState([]);
 
-    useEffect(() => {
-        fetchOpportunity();
+    useEffect(async () => {
+        await fetchOpportunity();
     }, [])
     useEffect(() => {
         console.log(opportunities)
     }, [opportunities])
 
     const fetchOpportunity = async () => {
-        const response = await axios.get(`${REACT_APP_SERVER_URL}/users/opportunities`)
-        setOpportunity(response.data);
+        const response = await axios.get(`${REACT_APP_SERVER_URL}/opportunities`)
+        setOpportunity(response.data.opportunities);
     }
 
-
+    
     return (
         <div className="board">
             <h1 className='opportunities'>Opportunities Available</h1>
