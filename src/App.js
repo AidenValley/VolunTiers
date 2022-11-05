@@ -17,6 +17,7 @@ import Contact from './components/Contact';
 import Past from './components/Past';
 import OrganizationsContainer from './components/OrganizationsContainer';
 import Opportunities from './components/Opportunities';
+import OppDetail from './components/OppDetail';
 import DashboardNavbar from './components/DashboardNavbar';
 import OrgDetail from './components/OrgDetail';
 import Userprofile from './components/Userprofile';
@@ -86,6 +87,7 @@ function App() {
           <Route path="/past" component={Past} />
           <Route path="/contact" component={Contact} />
           <Route path="/opportunities" component={Opportunities} />
+          <Route path="/oppdetail" component={OppDetail} />
           <Route path="/organizations" component={OrganizationsContainer} />
           <Route path="/dashboardnavbar" component={DashboardNavbar} />
           <Route path="/userprofile" component={Userprofile} />
