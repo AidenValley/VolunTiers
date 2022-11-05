@@ -1,7 +1,7 @@
-import React, { useEffect, useState }, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-const { REACT_APP_SERVER_URL } = process.env
 import axios from 'axios';
+
 const { REACT_APP_SERVER_URL } = process.env;
 
 const Opportunities = () => {
