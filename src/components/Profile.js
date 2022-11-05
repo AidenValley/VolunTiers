@@ -57,7 +57,7 @@ const Profile = (props) => {
                             <li className="nav-item">
                                 
                                     <span data-feather="bar-chart-2" className="align-text-bottom"></span>
-                                    Reviews
+                                    <NavLink className="nav-link" exact to="/orgdetail/:id" >Create Event</NavLink>
                               
                             </li>
                             <li className="nav-item">

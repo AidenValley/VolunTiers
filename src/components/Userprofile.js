@@ -18,7 +18,7 @@ const Userprofile = (props) => {
     }, [profile])
     
     const renderProfiles = async () => {
-        const response = await axios.get(`${REACT_APP_SERVER_URL}/users/userprofile`);
+        const response = await axios.get(`${REACT_APP_SERVER_URL}/users/:id`);
         setProfile(response.data);
     }
 
