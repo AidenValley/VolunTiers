@@ -38,7 +38,11 @@ const Profile = (props) => {
                         <ul className="nav flex-column">
                             <li className="nav-item">
                                     <span data-feather="home" className="align-text-bottom"></span>
-                                    <NavLink className="nav-link" exact to="/profile" >Dashboard</NavLink>
+                                    <NavLink className="nav-link" exact to="/" >Home</NavLink>
+                            </li>
+                            <li className="nav-item">
+                            <NavLink className="nav-link" exact to="/profile" >Dashboard</NavLink>
+                
                             </li>
                             <li className="nav-item">
                             <NavLink className="nav-link" exact to="/userprofile" >Update Profile</NavLink>
@@ -62,7 +66,7 @@ const Profile = (props) => {
                             <li className="nav-item">
                                
                                     <span data-feather="layers" className="align-text-bottom"></span>
-                                    
+                                    <NavLink className="nav-link" exact to="/organizations" >Create Org</NavLink>
                                 
                             </li>
                         </ul>
