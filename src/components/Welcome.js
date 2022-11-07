@@ -1,28 +1,56 @@
-import React from 'react';
+import React, {useEffect, useState } from 'react';
+import {
+    MDBNavbar,
+    MDBNavbarNav,
+    MDBNavbarItem,
+    MDBNavbarLink,
+    MDBNavbarToggler,
+    MDBContainer,
+    MDBIcon,
+    MDBCollapse,
+    MDBBtn
+  } from 'mdb-react-ui-kit';
 
 const Welcome = () => {
+    const [showBasic, setShowBasic] = useState(false);
     return (
-        <body className="d-flex h-100 text-center text-bg-dark">
-            <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-            <header class="mb-auto">
-            <div>
-                <h3 class="float-md-start mb-0">Welcome To VolunTier</h3>
-                <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#">VolunTier Opportunities</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#">Dashboard</a>
-                </nav>
+    <header>
+      <div
+        id='intro-example'
+        className='p-5 text-center bg-image'
+        style={{ backgroundImage: "url('https://mdbootstrap.com/img/new/slides/041.webp')" }}
+      >
+        <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}>
+          <div className='d-flex justify-content-center align-items-center h-100'>
+            <div className='text-white'>
+              <h1 className='mb-3'>Learn Bootstrap 5 with MDB</h1>
+              <h5 className='mb-4'>Best &amp; free guide of responsive web design</h5>
+              <MDBBtn
+                className="m-2"
+                tag="a"
+                outline
+                size="lg"
+                rel="nofollow"
+                target="_blank"
+                href='https://www.youtube.com/watch?v=c9B4TPnak1A'
+              >
+                Start tutorial
+              </MDBBtn>
+              <MDBBtn
+                className="m-2"
+                tag="a"
+                outline
+                size="lg"
+                target="_blank"
+                href='https://mdbootstrap.com/docs/standard/'
+              >
+                Download MDB UI KIT
+              </MDBBtn>
             </div>
-            <main class="px-3">
-                <h1>VolunTier: VolunGold, VolunSilver, VolunBronze</h1>
-                <p class="lead">This is all about Volunteering Activities and Events</p>
-                <p class="lead">
-                <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-                </p>
-            </main>
-        </header>
-            </div>
-        </body>
+          </div>
+        </div>
+      </div>
+    </header>
     )
 }
 
