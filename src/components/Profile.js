@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import axios from "axios";
+import setAuthToken from "../utils/setAuthToken";
+const { REACT_APP_SERVER_URL } = process.env;
 // import Userprofile from './components/Userprofile';
 // import DashboardNavbar from './components/DashboardNavbar';
 
@@ -8,7 +11,21 @@ const Profile = (props) => {
    const { id, name, email, exp, hours } = user;
    const expirationTime = new Date(exp * 1000);
    let currentTime = Date.now();
-    
+
+   const [profile, setProfile] = useState([]);
+   useEffect(() => {
+     renderProfiles();
+   }, []);
+   useEffect(() => {
+     console.log(profile);
+   }, [profile]);
+
+   const renderProfiles = async () => {
+    setAuthToken(localStorage.getItem("jwtToken"));
+    const response = await axios.get(`${REACT_APP_SERVER_URL}/users/profile`);
+    setProfile(response.data);
+  };
+
    // make a condition that compares exp and current time
    if (currentTime >= expirationTime) {
        handleLogout();
@@ -123,7 +140,8 @@ const Profile = (props) => {
                                 <div className='container'>
                                     <div className="row text-center">
                                         <div className="col border border-info">
-                                            <h4>Total Service Hours: {hours} </h4> 
+                                            <h4>Total Service Hours: </h4> 
+                                            <h5>{profile.hours}</h5>
                                 
                                         </div>
                                         <div className="col border border-info">

@@ -12,6 +12,7 @@ const Userprofile = () => {
   useEffect(() => {
     renderProfiles();
   }, []);
+  
   useEffect(() => {
     console.log(profile);
   }, [profile]);
@@ -34,12 +35,13 @@ const Userprofile = () => {
                 <MDBCardImage src="https://www.cityheadshots.com/uploads/5/1/2/1/5121840/highres-mjb-4556_orig.jpg"
                   alt="Avatar" className="my-5" style={{ width: '80px' }} fluid />
                 <MDBTypography tag="h5">{profile.name}</MDBTypography>
-                <MDBCardText>Web Designer</MDBCardText>
                 <MDBIcon far icon="edit mb-5" />
               </MDBCol>
               <MDBCol md="8">
                 <MDBCardBody className="p-4">
-                  <MDBTypography tag="h6">{profile.name}</MDBTypography>
+                  <MDBTypography tag="h6">{profile.name}
+                    <button tag= "h7">Edit </button>
+                  </MDBTypography>
                   <hr className="mt-0 mb-4" />
                   <MDBRow className="pt-1">
                     <MDBCol size="6" className="mb-3">
@@ -65,11 +67,6 @@ const Userprofile = () => {
                     </MDBCol>
                   </MDBRow>
 
-                  <div className="d-flex justify-content-start">
-                    <a href="#!"><MDBIcon fab icon="facebook me-3" size="lg" /></a>
-                    <a href="#!"><MDBIcon fab icon="twitter me-3" size="lg" /></a>
-                    <a href="#!"><MDBIcon fab icon="instagram me-3" size="lg" /></a>
-                  </div>
                 </MDBCardBody>
               </MDBCol>
             </MDBRow>
