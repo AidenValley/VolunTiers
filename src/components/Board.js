@@ -24,13 +24,13 @@ const Board = () => {
             <h1 className='leaderboard'>Top Tier Volunteers</h1>
 
             <div style={{ alignItems: 'center', margin: '20px 60px' }}>
-                <ul>
+                <ol>
                     {
                         leaders.map((leader) => {
                             return <li key={leader.id}>{ leader.name } - {leader.hours }</li>
                         })
                     }
-                </ul>
+                </ol>
             </div>
 
 
