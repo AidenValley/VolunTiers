@@ -5,6 +5,7 @@ import setAuthToken from "../utils/setAuthToken";
 import { MDBListGroup, MDBListGroupItem, MDBIcon } from "mdbreact";
 import DashboardCard from "./DashboardCard";
 import DashboardTable from "./DashboardTable";
+import DashboardIntro from "./DashboardIntro";
 
 const { REACT_APP_SERVER_URL } = process.env;
 
@@ -93,40 +94,29 @@ const Profile = (props) => {
               </ul>
             </div>
           </nav>
-            
+
           <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
               <h1 className="h2">Your Dashboard</h1>
-              <div className="btn-toolbar mb-2 mb-md-0">
-    
-              </div>
+              <div className="btn-toolbar mb-2 mb-md-0"></div>
             </div>
             <span className="portfolio-item d-block">
-              <div className="foto">
-                <h2>Hi, {name}</h2>
-                <h5>
-                  {" "}
-                  Email: {email} ID: {id}{" "}
-                </h5>
-              </div>
-              <br />
-
+                <DashboardIntro />
               <div className="">
                 <div className="">
                   <div className="row text-center">
                     <DashboardCard />
-                    </div>
                   </div>
                 </div>
-                
+              </div>
+
+              <div className="container">
                 <div className="container">
-                  <div className="container">
-                    <div className="text-center">
+                  <div className="text-center">
                     <DashboardTable />
-                    </div>
                   </div>
                 </div>
-              
+              </div>
             </span>
           </main>
         </div>
