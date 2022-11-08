@@ -8,50 +8,46 @@ import {
     MDBContainer,
     MDBIcon,
     MDBCollapse,
-    MDBBtn
+    MDBBtn,
+    MDBCarousel,
+    MDBCarouselItem,
   } from 'mdb-react-ui-kit';
 
 const Welcome = () => {
     const [showBasic, setShowBasic] = useState(false);
     return (
-    <header>
-      <div
-        id='intro-example'
-        className='p-5 text-center bg-image'
-        style={{ backgroundImage: "url('https://mdbootstrap.com/img/new/slides/041.webp')" }}
-      >
-        <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}>
-          <div className='d-flex justify-content-center align-items-center h-100'>
-            <div className='text-white'>
-              <h1 className='mb-3'>Learn Bootstrap 5 with MDB</h1>
-              <h5 className='mb-4'>Best &amp; free guide of responsive web design</h5>
-              <MDBBtn
-                className="m-2"
-                tag="a"
-                outline
-                size="lg"
-                rel="nofollow"
-                target="_blank"
-                href='https://www.youtube.com/watch?v=c9B4TPnak1A'
+            <MDBCarousel showControls fade>
+              <MDBCarouselItem
+                className='w-100 d-block'
+                itemId={1}
+                src='https://students.1fbusa.com/hubfs/25%20Ways%20to%20Volunteer%20in%20Your%20Community.jpg'
+                alt='...'
               >
-                Start tutorial
-              </MDBBtn>
-              <MDBBtn
-                className="m-2"
-                tag="a"
-                outline
-                size="lg"
-                target="_blank"
-                href='https://mdbootstrap.com/docs/standard/'
+                <h5>First slide label</h5>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </MDBCarouselItem>
+        
+              <MDBCarouselItem
+                className='w-100 d-block'
+                itemId={2}
+                src='https://www.oceans-research.com/wp-content/uploads/2022/01/Short-term.jpg'
+                alt='...'
               >
-                Download MDB UI KIT
-              </MDBBtn>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    )
+                <h5>Second slide label</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </MDBCarouselItem>
+        
+              <MDBCarouselItem
+                className='w-100 d-block'
+                itemId={3}
+                src='https://extension.umn.edu/sites/extension.umn.edu/files/styles/crop_banner_image_crop/public/kids-volunteering.jpg?h=3418dd7a&itok=UqGkYkuZ'
+                alt='...'
+              >
+                <h5>Third slide label</h5>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              </MDBCarouselItem>
+            </MDBCarousel>
+    );
 }
 
 export default Welcome;

@@ -27,7 +27,7 @@ const Board = () => {
                 <ol>
                     {
                         leaders.map((leader) => {
-                            return <li key={leader.id}>{ leader.name } - {leader.hours }</li>
+                            return <li key={leader.id}>{ leader.name } - {leader.hours } hours</li>
                         })
                     }
                 </ol>

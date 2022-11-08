@@ -57,10 +57,10 @@ const Profile = (props) => {
             id="sidebarMenu"
             className="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse "
           >
-            <div className="position-sticky pt-3 sidebar-sticky">
-              <ul className="nav flex-column">
+            <div className="position-sticky pt-5 sidebar-sticky w-100">
+              <ul className="nav flex-column ">
                 <MDBListGroup className="list-group-flush">
-                  <NavLink exact={true} to="/" activeClassName="activeClass">
+                  <NavLink exact={true} to="/profile" activeClassName="activeClass">
                     <MDBListGroupItem>
                       <MDBIcon icon="chart-pie" className="mr-3" />
                       Dashboard
@@ -74,19 +74,19 @@ const Profile = (props) => {
                   </NavLink>
                   <NavLink to="/opportunities" activeClassName="activeClass">
                     <MDBListGroupItem>
-                      <MDBIcon icon="table" className="mr-3" />
-                      Opportunities
+                      <MDBIcon icon="fa-solid fa-handshake" className="mr-3" />
+                      Opportunity
                     </MDBListGroupItem>
                   </NavLink>
                   <NavLink to="/board" activeClassName="activeClass">
                     <MDBListGroupItem>
-                      <MDBIcon icon="map" className="mr-3" />
-                      LeaderBoards
+                      <MDBIcon icon="fa-solid fa-crown" className="mr-3" />
+                      Leaders
                     </MDBListGroupItem>
                   </NavLink>
                   <NavLink to="/orgdetail/:id" activeClassName="activeClass">
                     <MDBListGroupItem>
-                      <MDBIcon icon="exclamation" className="mr-3" />
+                      <MDBIcon icon="fa-solid fa-calendar-lines-pen" className="mr-3" />
                       Create Event
                     </MDBListGroupItem>
                   </NavLink>
