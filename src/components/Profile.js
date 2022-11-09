@@ -11,7 +11,7 @@ const { REACT_APP_SERVER_URL } = process.env;
 
 const Profile = (props) => {
   const { handleLogout, user } = props;
-  const { id, name, email, exp, hours } = user;
+  const { exp } = user;
   const expirationTime = new Date(exp * 1000);
   let currentTime = Date.now();
 
@@ -84,7 +84,7 @@ const Profile = (props) => {
                       Leaders
                     </MDBListGroupItem>
                   </NavLink>
-                  <NavLink to="/orgdetail/:id" activeClassName="activeClass">
+                  <NavLink to="/organizations" activeClassName="activeClass">
                     <MDBListGroupItem>
                       <MDBIcon icon="fa-solid fa-calendar-lines-pen" className="mr-3" />
                       Create Event

@@ -6,8 +6,6 @@ import {
     MDBContainer,
     MDBInput,
     MDBCheckbox,
-    MDBBtn,
-    MDBIcon
   }
   from 'mdb-react-ui-kit';
   import logo from '../images/VolunTierLogo.png';
@@ -61,7 +59,7 @@ const Signup = () => {
         <form onSubmit={handleSubmit}>
             <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
                 <div className="text-center">
-                    <img src={logo}/>
+                    <img src={logo} alt="logo"/>
                 </div>
                 <br />
                 

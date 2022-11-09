@@ -30,22 +30,24 @@ const Userprofile = () => {
               <MDBCol md="4" className="gradient-custom text-center text-white"
                 style={{ borderTopLeftRadius: '.5rem', borderBottomLeftRadius: '.5rem' }}>
                 <MDBCardImage src="https://www.cityheadshots.com/uploads/5/1/2/1/5121840/highres-mjb-4556_orig.jpg"
-                  alt="Avatar" className="my-5" style={{ width: '80px' }} fluid />
-                <MDBTypography tag="h5">{profile.name}</MDBTypography>
+                  alt="Avatar" className="my-5" style={{ width: '80px' }} fluid 
+                  width="320"
+                  height="250" 
+                  />
+                <MDBTypography tag="h5"></MDBTypography>
                 <MDBIcon far icon="edit mb-5" />
               </MDBCol>
               <MDBCol md="8">
                 <MDBCardBody className="p-4">
                   <MDBTypography tag="h6">{profile.name}
-                    <button tag= "h7">Edit </button>
                   </MDBTypography>
                   <hr className="mt-0 mb-4" />
                   <MDBRow className="pt-1">
-                    <MDBCol size="6" className="mb-3">
+                    <MDBCol size="10" className="mb-3">
                       <MDBTypography tag="h6">Email</MDBTypography>
                       <MDBCardText className="text-muted">{profile.email}</MDBCardText>
                     </MDBCol>
-                    <MDBCol size="6" className="mb-3">
+                    <MDBCol size="10" className="mb-3">
                       <MDBTypography tag="h6">Phone</MDBTypography>
                       <MDBCardText className="text-muted">{profile.phone}</MDBCardText>
                     </MDBCol>

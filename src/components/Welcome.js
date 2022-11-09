@@ -1,20 +1,10 @@
-import React, {useEffect, useState } from 'react';
+import React from 'react';
 import {
-    MDBNavbar,
-    MDBNavbarNav,
-    MDBNavbarItem,
-    MDBNavbarLink,
-    MDBNavbarToggler,
-    MDBContainer,
-    MDBIcon,
-    MDBCollapse,
-    MDBBtn,
     MDBCarousel,
     MDBCarouselItem,
   } from 'mdb-react-ui-kit';
 
 const Welcome = () => {
-    const [showBasic, setShowBasic] = useState(false);
     return (
             <MDBCarousel showControls fade>
               <MDBCarouselItem
