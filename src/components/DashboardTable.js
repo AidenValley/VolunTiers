@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import setAuthToken from "../utils/setAuthToken";
 import axios from 'axios';
+
 import {
   MDBCard,
   MDBCardBody,
@@ -56,9 +57,19 @@ const TableSection = () => {
           <MDBCardBody>
             <MDBTable hover>
               <MDBTableHead color="blue lighten-4">
-                <strong>Past Volunteering Opportunities</strong>
+                <h5><strong>Past Volunteering Opportunities</strong></h5>
               </MDBTableHead>
-              <MDBTableBody></MDBTableBody>
+              <MDBTableBody>
+              <strong>
+              {
+                        opportunities.map((past) => {
+                            return <li className="nav-item" key={past.id}>
+                                    {past.name}
+                            </li>
+                        })
+                    }
+                </strong>
+              </MDBTableBody>
             </MDBTable>
           </MDBCardBody>
         </MDBCard>
