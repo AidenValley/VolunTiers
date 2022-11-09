@@ -26,7 +26,7 @@ import OrganizationsContainer from "./components/OrganizationsContainer";
 import Opportunities from "./components/Opportunities";
 import OpportunitiesDetail from "./components/OpportunitiesDetail";
 import OppDetail from "./components/OppDetail";
-import DashboardNavbar from "./components/DashboardNavbar";
+
 import OrgDetail from "./components/OrgDetail";
 import Userprofile from "./components/Userprofile";
 import Board from "./components/Board";
@@ -47,10 +47,6 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
     />
   );
 };
-
-// Opportunities
-
-// Opportunities
 
 function App() {
   // Set state values
@@ -86,16 +82,19 @@ function App() {
   };
 
   return (
-    <Router style={{ backgroundColor: '#f4f5f7' }}>
+    <Router>
       <div className="App">
         
         <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
+        
         <Route exact path="/" component={WelcomeIntro} />
         
+        
         <div className="container mt-5">
+        <Route exact path="/" component={Welcome} />
           <Switch>
             <Route path="/signup" component={Signup} />
-            <Route exact path="/" component={Welcome} />
+            
             <Route
               path="/login"
               render={(props) => (
@@ -107,6 +106,7 @@ function App() {
                 />
               )}
             />
+            
             <PrivateRoute
               path="/profile"
               component={Profile}
@@ -123,7 +123,7 @@ function App() {
             />
             <Route path="/oppdetail" component={OppDetail} />
             <Route path="/organizations" component={OrganizationsContainer} />
-            <Route path="/dashboardnavbar" component={DashboardNavbar} />
+            
             <Route path="/userprofile" component={Userprofile} />
             <Route path="/orgdetail/:id" component={OrgDetail} />
             <Route path="/board" component={Board} />

@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
-// import { NavLink, Link, Redirect } from 'react-router-dom';
-import DashboardNavbar from "./DashboardNavbar";
 import setAuthToken from "../utils/setAuthToken";
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBTypography, MDBIcon } from 'mdb-react-ui-kit';
-// import Profile from'./Profile';
 import axios from "axios";
 const { REACT_APP_SERVER_URL } = process.env;
 

@@ -1,5 +1,5 @@
-import React, {useState, useEffect, Profiler} from 'react';
-import { MDBCard, MDBCardBody, MDBIcon, MDBBreadcrumb, MDBBreadcrumbItem, MDBFormInline, MDBBtn } from 'mdbreact';
+import React, {useState, useEffect} from 'react';
+import { MDBCard, MDBCardBody, MDBBreadcrumb, MDBBreadcrumbItem } from 'mdbreact';
 import axios from "axios";
 import setAuthToken from "../utils/setAuthToken";
 const { REACT_APP_SERVER_URL } = process.env;
@@ -24,12 +24,14 @@ const DashboradIntro = () => {
     <MDBCard className="mb-5">
         <MDBCardBody id="breadcrumb" className="d-flex align-items-center justify-content-between ">
             <MDBBreadcrumb className='md-form m-0'>
+                <p>{intro.name}</p>
+                <p>{intro.email}</p>
                 {/* <MDBBreadcrumbItem>Welcome Back, {intro.name}</MDBBreadcrumbItem>
                 <MDBBreadcrumbItem active>{intro.email}</MDBBreadcrumbItem> */}
             </MDBBreadcrumb>
         </MDBCardBody>
     </MDBCard>
-  );
+  )
 };
 
 export default DashboradIntro;

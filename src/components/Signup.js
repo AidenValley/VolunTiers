@@ -75,7 +75,7 @@ const Signup = () => {
                 </div>
             
     
-                <MDBBtn className="mb-4">Sign in</MDBBtn>
+                <button className="btn btn-success" size='lg'>Sign In</button>
             </MDBContainer>
         </form>
   
