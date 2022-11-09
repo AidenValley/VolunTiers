@@ -4,7 +4,7 @@ import { MDBContainer } from 'mdb-react-ui-kit';
 const WelcomeIntro = () => {
     return (
       <>
-      <MDBContainer fluid>Helloooo</MDBContainer>
+      <MDBContainer fluid className='text-center'>Helloooo</MDBContainer>
       </>
     )
 }

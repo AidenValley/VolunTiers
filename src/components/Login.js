@@ -4,8 +4,10 @@ import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 import { Redirect } from 'react-router-dom';
 import setAuthToken from '../utils/setAuthToken';
-
+import {MDBContainer, MDBCol, MDBRow, MDBBtn, MDBIcon, MDBInput, MDBCheckbox } from 'mdb-react-ui-kit';
+import logo from '../images/VolunTierLogo.png';
 const { REACT_APP_SERVER_URL } = process.env;
+
 
 const Login = (props) => {
     const [email, setEmail] = useState('');
@@ -44,24 +46,72 @@ const Login = (props) => {
     if (props.user) return <Redirect to="/profile" /> // double check
 
     return (
-        <div className="row mt-4">
-            <div className="col-md-7 offset-md-3">
-                <div className="card card-body">
-                    <h2 className="py-2">Login</h2>
-                    <form onSubmit={handleSubmit}>
-                        <div className="form-group">
-                            <label htmlFor="email">Email</label>
-                            <input type="email" name="email" value={email} onChange={handleEmail} className="form-control" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="password">Password</label>
-                            <input type="password" name="password" value={password} onChange={handlePassword} className="form-control" />
-                        </div>
-                        <button type="submit" className="btn btn-primary float-right">Submit</button>
-                    </form>
-                </div>
+        <MDBContainer fluid className="p-3 my-5 h-custom">
+
+        <MDBRow>
+  
+          <MDBCol col='10' md='6'>
+            <img src={logo} class="img-fluid" alt="Sample image" />
+          </MDBCol>
+  
+          <MDBCol col='4' md='6'>
+  
+            <div className="d-flex flex-row align-items-center justify-content-center">
+  
+
+  
             </div>
+  
+            <div className="divider d-flex align-items-center my-4">
+              <strong className="text-center fw-bold mx-3 mb-0">Welcome To Our Login!</strong>
+            </div>
+            <form onSubmit={handleSubmit}>
+                <MDBInput wrapperClass='mb-4' placeholder='Email Address' id='formControlLg' type='email' size="lg" value={email} onChange={handleEmail}/>
+                <MDBInput wrapperClass='mb-4' placeholder='Password' id='formControlLg' type='password' size="lg" value={password} onChange={handlePassword}/>
+            
+                <div className="d-flex justify-content-between mb-4">
+                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
+                <a href="/">Forgot password?</a>
+                </div>
+    
+                <div className='text-center text-md-start mt-4 pt-2'>
+                <button className="btn btn-info" size='lg'>Login</button>
+                <p className="small fw-bold mt-2 pt-1 mb-2">Don't have an account? <a href="/signup" className="link-danger">Register</a></p>
+                </div>
+            </form>
+          </MDBCol>
+  
+        </MDBRow>
+  
+        <div className="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-success">
+  
+          <div className="text-white mb-3 mb-md-0">
+            Copyright © 2022. All rights reserved.
+          </div>
+  
+          <div>
+  
+            <MDBBtn tag='a' color='none' className='mx-3' style={{ color: 'white' }}>
+              <MDBIcon fab icon='facebook-f' size="md"/>
+            </MDBBtn>
+  
+            <MDBBtn tag='a' color='none' className='mx-3' style={{ color: 'white'  }}>
+              <MDBIcon fab icon='twitter' size="md"/>
+            </MDBBtn>
+  
+            <MDBBtn tag='a' color='none' className='mx-3' style={{ color: 'white'  }}>
+              <MDBIcon fab icon='google' size="md"/>
+            </MDBBtn>
+  
+            <MDBBtn tag='a' color='none' className='mx-3' style={{ color: 'white'  }}>
+              <MDBIcon fab icon='linkedin-in' size="md"/>
+            </MDBBtn>
+  
+          </div>
+  
         </div>
+  
+      </MDBContainer>
     )
 }
 
