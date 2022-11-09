@@ -2,6 +2,15 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
+import {
+    MDBContainer,
+    MDBInput,
+    MDBCheckbox,
+    MDBBtn,
+    MDBIcon
+  }
+  from 'mdb-react-ui-kit';
+  import logo from '../images/VolunTierLogo.png';
 const { REACT_APP_SERVER_URL } = process.env;
 
 const Signup = () => {
@@ -49,32 +58,28 @@ const Signup = () => {
     if (redirect) return <Redirect to="/login" /> // You can have them redirected to profile (your choice)
 
     return (
-        <div className="row mt-4">
-            <div className="col-md-7 offset-md-3">
-                <div className="card card-body">
-                    <h2 className="py-2">Signup</h2>
-                    <form onSubmit={handleSubmit}>
-                        <div className="form-group">
-                            <label htmlFor="name">Name</label>
-                            <input type="text" name="name" value={name} onChange={handleName} className="form-control"/>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="email">Email</label>
-                            <input type="email" name="email" value={email} onChange={handleEmail} className="form-control"/>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="password">Password</label>
-                            <input type="password" name="password" value={password} onChange={handlePassword} className="form-control"/>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="confirmPassword">Confirm Password</label>
-                            <input type="password" name="confirmPassword" value={confirmPassword} onChange={handleConfirmPassword} className="form-control"/>
-                        </div>
-                        <button type="submit" className="btn btn-primary float-right">Submit</button>
-                    </form>
+        <form onSubmit={handleSubmit}>
+            <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
+                <div className="text-center">
+                    <img src={logo} />
                 </div>
-            </div>
-        </div>
+                <br />
+                
+                <MDBInput wrapperClass='mb-4' placeholder='Name' id='formControlLg' type='name' size="lg" value={name} onChange={handleName}/>
+                <MDBInput wrapperClass='mb-4' placeholder='Email Address' id='formControlLg' type='email' size="lg" value={email} onChange={handleEmail}/>
+                <MDBInput wrapperClass='mb-4' placeholder='Password' id='formControlLg' type='password' size="lg" value={password} onChange={handlePassword}/>
+                <MDBInput wrapperClass='mb-4' placeholder='Confirm Password' id='formControlLg' type='password' size="lg" value={confirmPassword} onChange={handleConfirmPassword}/>
+                <div className="d-flex justify-content-between mx-3 mb-4">
+                    <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
+                    <a href="/">Forgot password?</a>
+                </div>
+            
+    
+                <MDBBtn className="mb-4">Sign in</MDBBtn>
+            </MDBContainer>
+        </form>
+  
+      
     )
 }
 
