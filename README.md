@@ -27,18 +27,20 @@ $env:NODE_OPTIONS = "--openssl-legacy-provider"
 
 ### User Story 
 
-- As a user, I want to be able to manage members that are apart of clubs and sports teams within my organization. 
-- As a user, I want to be able to verify active and inactive members service hours, contact information, and service project status. 
-- As a user, I want to be able to see how many service hours that I have completed and if the hours apply for credits. 
-- As a user, I would like to see currently available service hours and past service projects. 
+- As a user, I want to be able to see volunteer opportunities near me. 
+- As a user, I want to be able to volunteer for opportunities.
+- As a user, I want to be able to see how many service hours that I have completed. 
+- As a user, I would like to see past service projects. 
 - As a user, I would like to be able to sign in and out of service projects with accurately recorded hours. 
-- As a user, I would like to be able to my current badges earned and my ranking on the leader board. 
+- As a user, I would like to see my ranking on the leader board. 
+- As an organization, I would like to add an service opportunity.
+- As an organization, I would like to know who has signed up to volunteer at my event.
 
 
 # VolunTiers About:
-## MERN stack web application (Volunteer Tracking Application) that targets the users who are actively seeking for local volunteer activities and become (signup) Tier members. 
+## MERN stack web application utilizing ReactJS, Express, Mongoose, and NodeJS that targets users who are actively seeking local volunteer activities and organizations in search of service-minded individuals for their community-service opportunities. 
 
-## Essentially, this application is fun and intuitive but also helps multiples of professionals who intend to organize their volunteer activities in a condensed form.
+## This application is fun and intuitive but also helps multiples of professionals who intend to organize their volunteer activities in one place.
 
 # VolunTiers WireFrame:
 ![VolunTier-WireFrame](https://user-images.githubusercontent.com/107300143/198853680-c266df19-fc8c-4ac5-85cd-231cd1177c43.png)
