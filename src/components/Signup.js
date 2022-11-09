@@ -61,7 +61,7 @@ const Signup = () => {
         <form onSubmit={handleSubmit}>
             <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
                 <div className="text-center">
-                    <img src={logo} />
+                    <img src={logo}/>
                 </div>
                 <br />
                 

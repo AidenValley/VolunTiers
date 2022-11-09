@@ -51,7 +51,12 @@ const Login = (props) => {
         <MDBRow>
   
           <MDBCol col='10' md='6'>
-            <img src={logo} class="img-fluid" alt="Sample image" />
+            <img src={logo} 
+            className="img-responsive rounded ml-5 img-fluid" 
+            alt="Sample image"
+            width="320"
+            height="250" 
+            />
           </MDBCol>
   
           <MDBCol col='4' md='6'>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBContainer, MDBCardTitle } from 'mdb-react-ui-kit';
+import {MDBCardTitle } from 'mdb-react-ui-kit';
 
 const WelcomeIntro = () => {
     return (

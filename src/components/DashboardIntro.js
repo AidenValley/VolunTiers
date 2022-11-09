@@ -24,11 +24,11 @@ const DashboradIntro = () => {
     <MDBCard className="mb-5">
         <MDBCardBody id="breadcrumb" className="d-flex align-items-center justify-content-between ">
             <MDBBreadcrumb className='md-form m-0'>
-                <p>{intro.name}</p>
-                <p>{intro.email}</p>
-                {/* <MDBBreadcrumbItem>Welcome Back, {intro.name}</MDBBreadcrumbItem>
-                <MDBBreadcrumbItem active>{intro.email}</MDBBreadcrumbItem> */}
+                <MDBBreadcrumb><h4 className='md-form m-0'>Welcome Back!</h4></MDBBreadcrumb>
+                <MDBBreadcrumb><h4 className='md-form m-0'>{intro.name}</h4></MDBBreadcrumb>
+                <MDBBreadcrumb><h4 className='md-form m-0'>{intro.email}</h4></MDBBreadcrumb>
             </MDBBreadcrumb>
+            
         </MDBCardBody>
     </MDBCard>
   )
