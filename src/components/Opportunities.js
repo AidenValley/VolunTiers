@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-
-
+import { NavLink } from 'react-router-dom';
 const { REACT_APP_SERVER_URL } = process.env;
 
 const Opportunities = () => {
     const [opportunities, setOpportunity] = useState([]);
-
     useEffect(async () => {
         await fetchOpportunity();
     }, [])
+
     useEffect(() => {
         console.log(opportunities)
     }, [opportunities])
@@ -28,15 +27,21 @@ const Opportunities = () => {
                 <ul>
                     {
                         opportunities.map((opportunities) => {
-                            return <li key={opportunities.id}>{ opportunities.name }</li>
+                            return <li className="nav-item" key={opportunities.id}>
+                                <NavLink className="nav-link" to={{
+                                    pathname: "/opportunitiesdetail",
+                                    state: { opportunities }
+                                }}>
+                                    {opportunities.name}
+                                </NavLink>
+
+                            </li>
+
                         })
                     }
                 </ul>
             </div>
-
-
         </div>
     );
 }
-
 export default Opportunities;

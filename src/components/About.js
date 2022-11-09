@@ -3,9 +3,9 @@ import React from 'react';
 const About = () => {
     return (
         <div>
-            <h1>About</h1>
-            <h2>VolunTier</h2>
-            <p> Hell to All, This is Voluntier </p>
+            <h2>Make a Difference in your Community</h2>
+            <h1>VolunTier</h1>
+            <p> Do good, reach new levels: </p>
             <p> VolunGold </p>
             <p> VolunSilver </p>
             <p> VolunBronze </p>

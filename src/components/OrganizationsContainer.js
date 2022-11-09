@@ -27,7 +27,7 @@ const OrganizationsContainer = () => {
                 console.log('===> Yay, new organization');
                 console.log(response);
                 setCreated(true);
-             setOrg(response.data.organizations)
+                setOrg(response.data.organizations)
             })
     }
 
@@ -37,14 +37,17 @@ const OrganizationsContainer = () => {
             <h1>Welcome, {org.orgName}!</h1>
             <p>You can create an event or look at who's registered for your event here.</p>
             <div>
-                <OppCreateForm org={org._id}/>
+                <OppCreateForm org={org._id} />
             </div>
         </div>)
-    } 
+    }
 
 
     return (
         <div className="row mt-4">
+            <div>
+                <h3>To add an event, please register your organization.</h3>
+            </div>
             <div className="col-md-7 offset-md-3">
                 <div className="card card-body">
                     <h2 className="py-2">Organization Signup</h2>
