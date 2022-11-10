@@ -7,7 +7,7 @@ function Hours(need, user) {
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
   console.log(`###########>>>>>>`, need);
-
+  localStorage.setItem('need', need);
   const handleTimeIn = (e) => {
     e.preventDefault();
     let now = new Date();
@@ -25,7 +25,7 @@ function Hours(need, user) {
     e.preventDefault();
     axios
       .post(
-        `${REACT_APP_SERVER_URL}/hours/submitTime/${need.opportunities._id}`,
+        `${REACT_APP_SERVER_URL}/hours/submitTime/${localStorage.getItem('need').opportunities._id}`,
         {
           email: user.email,
           signIn: checkIn,
