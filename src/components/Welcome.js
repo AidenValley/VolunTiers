@@ -25,6 +25,7 @@ const Welcome = () => {
               >
                 <h5><strong>Recycle Together!</strong></h5>
                 <h6><strong>Help in recycle and contribute to the cause of a greener community!</strong></h6>
+
               </MDBCarouselItem>
         
               <MDBCarouselItem
@@ -37,7 +38,6 @@ const Welcome = () => {
                 <h6><strong>Help with feeding, playing and caaring for an animal in need!</strong></h6>
               </MDBCarouselItem>
             </MDBCarousel>
-            
     );
 }
 

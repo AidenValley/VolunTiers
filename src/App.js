@@ -26,7 +26,11 @@ import OrganizationsContainer from "./components/OrganizationsContainer";
 import Opportunities from "./components/Opportunities";
 import OpportunitiesDetail from "./components/OpportunitiesDetail";
 import OppDetail from "./components/OppDetail";
+<<<<<<< HEAD
+
+=======
 import DashboardNavbar from "./components/DashboardNavbar";
+>>>>>>> main
 import OrgDetail from "./components/OrgDetail";
 import Userprofile from "./components/Userprofile";
 import Board from "./components/Board";
@@ -47,10 +51,13 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
     />
   );
 };
+<<<<<<< HEAD
+=======
 
 // Opportunities
 
 // Opportunities
+>>>>>>> main
 
 function App() {
   // Set state values
@@ -86,6 +93,21 @@ function App() {
   };
 
   return (
+<<<<<<< HEAD
+    <Router>
+      <div className="App">
+        
+        <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
+        
+        <Route exact path="/" component={WelcomeIntro} />
+        
+        
+        <div className="container mt-5">
+        <Route exact path="/" component={Welcome} />
+          <Switch>
+            <Route path="/signup" component={Signup} />
+            
+=======
     <Router style={{ backgroundColor: '#f4f5f7' }}>
       <div className="App">
         
@@ -96,6 +118,7 @@ function App() {
           <Switch>
             <Route path="/signup" component={Signup} />
             <Route exact path="/" component={Welcome} />
+>>>>>>> main
             <Route
               path="/login"
               render={(props) => (
@@ -107,6 +130,10 @@ function App() {
                 />
               )}
             />
+<<<<<<< HEAD
+            
+=======
+>>>>>>> main
             <PrivateRoute
               path="/profile"
               component={Profile}
@@ -123,7 +150,11 @@ function App() {
             />
             <Route path="/oppdetail" component={OppDetail} />
             <Route path="/organizations" component={OrganizationsContainer} />
+<<<<<<< HEAD
+            
+=======
             <Route path="/dashboardnavbar" component={DashboardNavbar} />
+>>>>>>> main
             <Route path="/userprofile" component={Userprofile} />
             <Route path="/orgdetail/:id" component={OrgDetail} />
             <Route path="/board" component={Board} />
