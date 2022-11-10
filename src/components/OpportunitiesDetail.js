@@ -2,6 +2,7 @@ import React, { useState, useEffect, useSyncExternalStore } from 'react';
 import { useLocation } from 'react-router-dom';
 import setAuthToken from "../utils/setAuthToken";
 import axios from 'axios';
+import Hours from './Hours';
 
 const { REACT_APP_SERVER_URL } = process.env;
 
@@ -72,7 +73,7 @@ const OpportunitiesDetail = (user) => {
                 <h4>{data.opportunities.startTime} until {data.opportunities.endTime}</h4>
                 <h5>{data.opportunities.description}</h5>
             </div>
-            {/* <div>hours component here, Daniela</div> */}
+                <Hours need = {data} user = {profile}/>
             <div>
             <button onClick={handleDelete} className="btn btn-primary float-right">Unregister</button>
             </div>
