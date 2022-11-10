@@ -1,29 +1,13 @@
 # VolunTiers
 
+Welcome to VolunTiers! This MERN Stack application was created with the purpose of facilitating the tracking of volunteer hours of participation and tracking of events as well. ReactJS was used to build interface components and Bootstrap and CSS was used for styling. This documentation is meant to explain how this app was created and resources were used for its completions.
+
 # Setup
 
-Due to this project using an older package not fully supported on node17+ we'll need to run one initial command before we run our npm install. 
-
-If you are on mac or linux, run the following command:
-
-```
-export NODE_OPTIONS=--openssl-legacy-provider
-```
-
-for windows users use one of these two commands:
-
-command prompt: 
-
-```
-set NODE_OPTIONS=--openssl-legacy-provider
-```
-
-powershell:
-
-```
-$env:NODE_OPTIONS = "--openssl-legacy-provider"
-```
-
+1. Fork this repository
+2. Clone to your machine
+3. Once open run ``npm i`` to install necessary dependencies
+4. Run npm start to load up the server and preview the application
 
 ### User Story 
 
@@ -54,6 +38,24 @@ $env:NODE_OPTIONS = "--openssl-legacy-provider"
 
 ### User Profile Page intends to contain the most crucial information / data that the normal users can dropdown for events, access the service hours, and more volunteer opportunities!
 
+## Log In Page:
+
+![Screen Shot 2022-11-09 at 8 19 22 PM](https://user-images.githubusercontent.com/96893640/200976876-e40d3365-01f1-4caf-89f6-f30710426b82.png)
+
+## Home page
+![Screen Shot 2022-11-09 at 8 20 02 PM](https://user-images.githubusercontent.com/96893640/200976962-95cbfaa5-6fa8-4545-acb5-4392948bbadc.png)
+
+## Dashboard
+![Screen Shot 2022-11-09 at 8 20 46 PM](https://user-images.githubusercontent.com/96893640/200977055-46669362-e9ab-4ea7-b23f-82752905a1ab.png)
+
+## Profile
+![Screen Shot 2022-11-09 at 8 21 27 PM](https://user-images.githubusercontent.com/96893640/200977153-5926dbbf-11fa-4777-b70c-db416c1ec92e.png)
+
+## LeaderBoard
+![Screen Shot 2022-11-09 at 8 21 57 PM](https://user-images.githubusercontent.com/96893640/200977210-448e9ed1-8ca4-46f7-bec4-571806af826e.png)
+
+## Events/Opportunities
+![Screen Shot 2022-11-09 at 8 22 38 PM](https://user-images.githubusercontent.com/96893640/200977299-c10b4207-cef7-4303-be96-b3b4a630ee9a.png)
 
 
 
@@ -78,22 +80,39 @@ $env:NODE_OPTIONS = "--openssl-legacy-provider"
 
 ```jsx
 // Imports
-import React, { useEffect, useState } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
-import jwt_decode from 'jwt-decode';
-import setAuthToken from './utils/setAuthToken';
+import React, { useEffect, useState } from "react";
+import {
+  NavLink,
+  Route,
+  Switch,
+  Redirect,
+  BrowserRouter as Router,
+} from "react-router-dom";
+import jwt_decode from "jwt-decode";
+import setAuthToken from "./utils/setAuthToken";
 
 // CSS
 import './App.css';
 
 // Components
-import Signup from './components/Signup';
-import About from './components/About';
-import Footer from './components/Footer';
-import Login from './components/Login';
-import Navbar from './components/Navbar';
-import Profile from './components/Profile';
-import Welcome from './components/Welcome';
+import Signup from "./components/Signup";
+import About from "./components/About";
+import Footer from "./components/Footer";
+import Login from "./components/Login";
+import Navbar from "./components/Navbar";
+import Profile from "./components/Profile";
+import Welcome from "./components/Welcome";
+import WelcomeIntro from "./components/WelcomeIntro";
+import Contact from "./components/Contact";
+import Past from "./components/Past";
+import OrganizationsContainer from "./components/OrganizationsContainer";
+import Opportunities from "./components/Opportunities";
+import OpportunitiesDetail from "./components/OpportunitiesDetail";
+import DashboardNavbar from "./components/DashboardNavbar";
+import OrgDetail from "./components/OrgDetail";
+import Userprofile from "./components/Userprofile";
+import Board from "./components/Board";
+
 ```
 
 ### `useState` inside `App`
