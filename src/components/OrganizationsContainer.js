@@ -2,6 +2,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import OppCreateForm from './OppCreateForm';
+import logo from '../images/VolunTierLogo.png';
+import {
+    MDBContainer,
+    MDBInput,
+    MDBCardTitle
+  }
+  from 'mdb-react-ui-kit';
+
 const { REACT_APP_SERVER_URL } = process.env;
 
 const OrganizationsContainer = () => {
@@ -44,35 +52,31 @@ const OrganizationsContainer = () => {
 
 
     return (
-        <div className="row mt-4">
-            <div>
-                <h3>To add an event, please register your organization.</h3>
+        
+        
+        <form onSubmit={handleSubmit}>
+        <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
+            <div className="text-center">
+                <img src={logo} alt="logo"/>
             </div>
-            <div className="col-md-7 offset-md-3">
-                <div className="card card-body">
-                    <h2 className="py-2">Organization Signup</h2>
-                    <form onSubmit={handleSubmit}>
-                        <div className="form-group">
-                            <label htmlFor="orgName">Organization Name</label>
-                            <input type="text" name="orgName" value={org.orgName} onChange={handleChange} className="form-control" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="contactEmail">Email</label>
-                            <input type="email" name="contactEmail" value={org.contactEmail} onChange={handleChange} className="form-control" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="contactPerson">Contact Name</label>
-                            <input type="text" name="contactPerson" value={org.contactPerson} onChange={handleChange} className="form-control" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="contactPhone">Phone</label>
-                            <input type="text" name="contactPhone" value={org.contactPhone} onChange={handleChange} className="form-control" />
-                        </div>
-                        <button type="submit" className="btn btn-primary float-right">Submit</button>
-                    </form>
-                </div>
+            <MDBCardTitle className='fa-h5 fa-solid h1-responsive pt-3 m-5 text-center'>
+                <h3 className=''> Please Register Your Organization</h3>
+            </MDBCardTitle>
+            <br />
+            
+            <MDBInput wrapperClass='mb-4' placeholder='Organization Name' id='formControlLg' type='name' size="lg" value={org.orgName} onChange={handleChange}/>
+            <MDBInput wrapperClass='mb-4' placeholder='Email Address' id='formControlLg' type='email' size="lg" value={org.contactEmail} onChange={handleChange}/>
+            <MDBInput wrapperClass='mb-4' placeholder='Contact Name' id='formControlLg' type='password' size="lg" value={org.contactPerson} onChange={handleChange}/>
+            <MDBInput wrapperClass='mb-4' placeholder='Phone' id='formControlLg' type='password' size="lg" value={org.contactPhone} onChange={handleChange}/>
+            <div className="d-flex justify-content-between mx-3 mb-4">
+            
+                
             </div>
-        </div>
+        
+
+            <button className="btn btn-success" size='lg'>Submit</button>
+        </MDBContainer>
+    </form>
     )
 }
 
