@@ -1,65 +1,98 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
+import logo from "../images/VolunTierLogo.png";
+import { MDBContainer, MDBCardTitle } from "mdb-react-ui-kit";
 const { REACT_APP_SERVER_URL } = process.env;
 
 const Contact = () => {
   const [msg, setMsg] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
 
-  const [created, setCreated] = useState(false)
+  const [created, setCreated] = useState(false);
 
   const handleChange = (e) => {
     setMsg({ ...msg, [e.target.name]: e.target.value });
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newContactMsg = msg;
-    axios.post(`${REACT_APP_SERVER_URL}/contactus`, newContactMsg)
-      .then(response => {
-        console.log('===> Yay, new contact message');
+    axios
+      .post(`${REACT_APP_SERVER_URL}/contactus`, newContactMsg)
+      .then((response) => {
+        console.log("===> Yay, new contact message");
         console.log(response);
         setCreated(true);
-        setMsg(response.data.contacts)
-      })
-  }
+        setMsg(response.data.contacts);
+      });
+  };
 
   if (created) {
-
-    return (<div>
-      <h1>Thank you, {msg.name}!</h1>
-      <p>You're already making a difference. We look forward to answering your questions within 48 business hours.</p>
-    </div>)
+    return (
+      <div>
+        <h1>Thank you, {msg.name}!</h1>
+        <p>
+          You're already making a difference. We look forward to answering your
+          questions within 48 business hours.
+        </p>
+      </div>
+    );
   }
 
-
   return (
-    <div className="row mt-4">
-      <div className="col-md-7 offset-md-3">
-        <div className="card card-body">
-          <h2 className="py-2">Ask Us Anything! We want to help.</h2>
+    <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
+      <div className="text-center">
+        <img src={logo} alt="logo" />
+      </div>
+      <MDBCardTitle className="fa-h5 fa-solid h1-responsive pt-3 m-5 text-center">
+        <h3 className=""> Ask Us Anything! We want to help.</h3>
+      </MDBCardTitle>
+      <div className="row">
+        <div className="col-md-7 offset-md-2">
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" value={msg.name} onChange={handleChange} className="form-control" />
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={msg.name}
+                onChange={handleChange}
+                className="form-control"
+              />
             </div>
             <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input type="email" name="email" value={msg.email} onChange={handleChange} className="form-control" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={msg.email}
+                onChange={handleChange}
+                className="form-control"
+              />
             </div>
             <div className="form-group">
-              <label htmlFor="message">Your message/question here...</label>
-              <input type="text" name="message" value={msg.message} onChange={handleChange} className="form-control" />
+              <input
+                type="text"
+                name="message"
+                placeholder="Your message/question here..."
+                value={msg.message}
+                onChange={handleChange}
+                className="form-control"
+              />
             </div>
-            <button type="submit" className="btn btn-primary float-right">Submit</button>
+            <div className="my-5 d-flex flex-column w-100">
+              <button type="submit" className="btn btn-success">
+                Submit
+              </button>
+            </div>
           </form>
         </div>
       </div>
-    </div>
-  )
-}
+    </MDBContainer>
+  );
+};
 
 export default Contact;
