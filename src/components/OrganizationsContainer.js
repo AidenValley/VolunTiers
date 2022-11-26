@@ -93,10 +93,11 @@ const OrganizationsContainer = () => {
             className="form-control"
           />
         </div>
-
-        <button type="submit" size="lg" className="btn btn-success">
-          Submit
-        </button>
+        <div className="my-5 d-flex flex-column w-100">
+            <button size="lg" className="btn btn-success">
+            Submit
+            </button>
+        </div>
       </form>
     </MDBContainer>
   );
