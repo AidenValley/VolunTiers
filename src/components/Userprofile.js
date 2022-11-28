@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import setAuthToken from "../utils/setAuthToken";
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn } from 'mdb-react-ui-kit';
 import axios from "axios";
@@ -55,8 +56,12 @@ const Userprofile = () => {
                       </div>
                     </div>
                     <div className="">
-                      <MDBBtn className="btn btn-success">Create Event</MDBBtn>
-                      <MDBBtn className="flex-grow-1">Back to Opportunities</MDBBtn>
+                      <NavLink to="/organizations" activeClassName="activeClass">
+                        <MDBBtn className="btn btn-success">Create Event</MDBBtn>
+                      </NavLink>
+                      <NavLink to="/opportunities" activeClassName="activeClass">
+                        <MDBBtn className="flex-grow-1">Back to Opportunities</MDBBtn>
+                      </NavLink>
                     </div>
                   </div>
                 </div>
