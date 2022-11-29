@@ -29,9 +29,9 @@ const Opportunities = () => {
   };
 
   return (
-    <MDBRow>
-      <MDBCol sm="6">
-        <MDBCard>
+    <MDBRow >
+      <MDBCol sm="12">
+        <MDBCard alignment="center">
           <MDBCardBody>
             <MDBCardTitle>
               <h1 className="opportunities">Available Opportunities </h1>
