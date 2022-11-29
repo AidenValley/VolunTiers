@@ -79,28 +79,38 @@ const OpportunitiesDetail = (user) => {
 
   if (isregistered) {
     return (
-      <div>
-        <div>
-          <h3>You are registered for </h3>
-          <h2>{data.opportunities.name}</h2>
-          <h4>{`${new Date(data.opportunities.date).getMonth() + 1}-${new Date(
-            data.opportunities.date
-          ).getDate()}-${new Date(data.opportunities.date).getFullYear()}`}</h4>
-          <h4>
+      <MDBCard alignment="center">
+      <MDBCardHeader>
+        <h2>You are registered for...</h2>
+      </MDBCardHeader>
+      <MDBCardBody>
+        <MDBCardTitle>
+            <img src={logo} alt="logo" width="150px"/>
+        </MDBCardTitle>
+        <MDBCardText>
+          <h3>Volunteer for {data.opportunities.name}</h3>
+        </MDBCardText>
+        <MDBCardText>
+          <strong>
             {data.opportunities.startTime} until {data.opportunities.endTime}
-          </h4>
-          <h5>{data.opportunities.description}</h5>
-        </div>
-        <Hours need={data} user={profile} />
-        <div>
-          <button
-            onClick={handleDelete}
-            className="btn btn-primary float-right"
-          >
-            Unregister
-          </button>
-        </div>
-      </div>
+          </strong>
+        </MDBCardText>
+        <MDBCardText>
+          <h4>{data.opportunities.description}</h4>
+        </MDBCardText>
+        <MDBBtn className="btn-success">
+          <Hours need={data} user={profile} />
+        </MDBBtn>
+        <MDBBtn type="submit" onClick={handleDelete} className="btn-danger">
+          Unregister
+        </MDBBtn>
+      </MDBCardBody>
+      <MDBCardFooter>{`${
+        new Date(data.opportunities.date).getMonth() + 1
+      }-${new Date(data.opportunities.date).getDate()}-${new Date(
+        data.opportunities.date
+      ).getFullYear()}`}</MDBCardFooter>
+    </MDBCard>
     );
   }
 
